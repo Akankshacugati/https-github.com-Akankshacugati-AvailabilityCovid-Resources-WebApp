@@ -1,0 +1,98 @@
+body {
+  background-image: url("https://www.iabc.com/wp-content/uploads/2020/03/pandemic2.jpg");
+}
+h2 {
+  text-align: center;
+  margin-top: 0px;
+  padding: 20px;
+  color: white;
+  background-color: rgb(0, 0, 0);
+  font-weight: normal;
+  font-family: "Lucida Console";
+}
+
+.login {
+  padding: 10px;
+  margin: 10px;
+}
+p {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+.search {
+  display: flex;
+  padding: 10px;
+  margin: 10px;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.login {
+  display: inline-block;
+  background-color: blanchedalmond;
+  border: solid 2px rgb(229, 165, 165);
+}
+label {
+  margin-right: 10px;
+  font-weight: normal;
+}
+input {
+  padding: 5px;
+}
+
+.infotable {
+  padding: 10px;
+  margin: 10px;
+}
+table {
+  width: 100%;
+}
+th {
+  padding: 15px;
+  color: white;
+  background-color: rgb(0, 0, 0);
+}
+th,
+td {
+  border-bottom: solid 2px brown;
+}
+td {
+  text-align: center;
+  padding: 10px;
+}
+tr {
+  background-color: rgb(205, 243, 117);
+}
+
+tr:hover {
+  background-color: #a9c21a;
+}
+
+.nametd {
+  text-align: left;
+}
+
+button {
+  padding: 10px;
+  background-color: rgb(255, 153, 112);
+  border: none;
+  margin-left: 20px;
+}
+button:hover {
+  background-color: rgb(123, 197, 63);
+  cursor: pointer;
+}
+
+.abcde {
+  background-color: black;
+  padding: 500px;
+}
+li {
+  padding: 20px;
+  margin: 20px;
+}
+
+#errormessage {
+  color: red;
+  margin-bottom: 10px;
+}

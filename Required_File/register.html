@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>COVID-19</title>
+<link href="register.css?v=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <h2>
+        COVID 19 HOSPITAL RESOURCE AVAILABILITY
+    </h2>
+    <div class= "register">
+    <form id = "form" action = "register.php" method = "POST">
+        <h1>Register</h1>
+
+        <p>
+            <label>Hospital Username</label>
+            <input id = "uname" type = "text" maxlength="10" name = "user" placeholder="Enter name" required/>
+        </p>
+        <p>
+            <label>Hospital Name</label>
+            <input id = "hname" type = "text" maxlength="50" name = "name" placeholder="Enter name" required/>
+        </p>
+        <label>Address</label>
+        <p>
+            <label>City</label>
+            <input  type = "text" name = "city" placeholder="Enter City" required/>
+            <label>State</label>
+            <input  type = "text" name = "state" placeholder="Enter State" required/>
+
+            <label>Street</label>
+            <input type = "text" name = "street" placeholder="Enter Street" required/>
+            <label>Pincode</label>
+            <input type = "number" maxlength = "6" name = "pincode" placeholder="Enter Pincode" required/>
+        </p>
+        <p>
+            <label>Phone number</label>
+            <input  type = "text" maxlength = "10" name = "phonenum" placeholder="Enter phonenumber" required/>
+        </p>
+        <p>
+            <label>Password</label>
+            <input type = "password" id = "password" name = "password" value = "" placeholder="Enter password" required/>
+            <div id = "error" ></div>
+        </p>
+        <button type="submit">Register</button>
+        <button type = "reset" id = "reset-button">Reset</button>
+    </form>
+</div>
+  
+
+</body>
+</html>
+
+<script>
+var form = document.getElementById("form");
+    var pass = document.getElementById('password');
+    var err = document.getElementById('error');
+    var resetButton = document.getElementById("reset-button");
+
+    var errormessage = [];
+    form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        if(pass.value.length <= 5) {
+            errormessage.push("Please make sure password length is greater than 5");
+            console.log('error');
+        }
+        if(errormessage.length > 0){
+            e.preventDefault();
+            err.innerText = errormessage;
+            err.style.color = "red";
+            errormessage = [];
+        }else{
+            form.submit();
+        }
+
+       
+    })
+    resetButton.addEventListener("click", () => {
+ 
+  errorMessages = [];
+  err.innerText = "";
+  form.reset();
+});
+</script>
